@@ -77,6 +77,7 @@ function getRandomQuote(){
 function printQuote(){
   let quote = getRandomQuote();
   document.getElementById("quote-box").innerHTML = quoteToHtml(quote);
+  changeColor();
 }
 
 function quoteToHtml(quote){
@@ -90,7 +91,16 @@ function quoteToHtml(quote){
   return `${html}</p>`;
 
 }
+function changeColor(){
+  var randomColor = () =>{
+    return `${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)}`;
+  }
+  document.getElementsByClassName("container")[0].style.backgroundColor = `rgb(${randomColor()})`;
+}
 
+window.onload = ()=>{
+  setInterval( printQuote, 6000);
+}
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
