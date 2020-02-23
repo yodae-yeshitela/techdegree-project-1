@@ -115,6 +115,14 @@ h1 {
   font-style: normal;
 }
 
+.tag{
+  box-sizing: border-box;
+  float: right;
+  margin-left: 1em;
+  border: black solid 1px;
+  border-radius: 1em;
+  padding: .1em .5em;
+}
 @media (min-width: 768px) {
   body {
     padding: 25px;
