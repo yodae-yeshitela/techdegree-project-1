@@ -157,8 +157,8 @@ function changeColor() {
     )},${Math.floor(Math.random() * 256)}`;
   };
   //set the background color to the generated color
-  document.getElementsByClassName(
-    "container"
+  document.getElementsByTagName(
+    "body"
   )[0].style.backgroundColor = `rgb(${randomColor()})`;
 }
 
